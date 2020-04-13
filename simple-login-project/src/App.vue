@@ -1,13 +1,3 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -34,7 +24,7 @@
 <template>
     <div id="app">
         <div id="nav">
-            <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace>Logout</router-link>
+            <router-link v-if="authenticated" to="/" v-on:click.native="logout()" replace>Logout</router-link>
         </div>
         <router-view @authenticated="setAuthenticated" />
     </div>
@@ -47,8 +37,8 @@
             return {
                 authenticated: false,
                 mockAccount: {
-                    username: "nraboy",
-                    password: "password"
+                    username: "lol",
+                    password: "123"
                 }
             }
         },
